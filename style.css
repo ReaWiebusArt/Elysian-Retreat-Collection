@@ -14,3 +14,21 @@ footer{background:#fafbf9;padding:106px 0 37px}.footer-content{max-width:var(--g
 @media(max-width:1020px){.wrap{padding-inline:38px}.gallery{grid-template-columns:repeat(2,minmax(0,1fr));max-width:730px;gap:75px 55px}.image-button{height:335px}.section-intro,.purchase-note{max-width:730px}.lightbox-inner{gap:30px;padding:72px 30px;grid-template-columns:minmax(0,1fr) 270px}}
 @media(max-width:640px){.wrap{padding-inline:25px}.header-inner{min-height:68px}.brand{font-size:24px}.nav{gap:15px}.nav a{font-size:10px}.hero{min-height:480px;padding-block:84px 85px}.hero h1{font-size:clamp(62px,13vw,88px);margin:30px 0}.eyebrow{font-size:9px;line-height:1.7}.hero p{font-size:12px}.collection{padding-top:20px;padding-bottom:82px}.section-intro{display:block;margin-bottom:52px}.section-intro p{margin:17px 0 0}.gallery{grid-template-columns:minmax(0,1fr);gap:78px;max-width:430px}.image-button{height:min(112vw,435px)}.art-card h3{font-size:34px}.art-desc{font-size:12.5px}.purchase-note{display:block;margin-top:72px;padding:24px 0}.note-body{margin-top:13px}.how{padding:74px 0 81px}.how h2{margin-bottom:37px}.steps{grid-template-columns:1fr;gap:28px}.step{display:grid;grid-template-columns:45px 1fr;column-gap:15px}.step-n{grid-row:1/span 2;font-size:30px}.step h3{margin:0 0 7px}.step p{grid-column:2}.footer-content h2{font-size:clamp(52px,10.8vw,74px);margin-bottom:61px}footer{padding:83px 0 30px}.footer-bottom{display:block}.footer-bottom div+div{margin-top:9px}.lightbox{overflow-y:auto}.lightbox-inner{display:block;padding:70px 24px 35px}.lightbox-img{height:auto;max-height:58vh;max-width:100%}.lightbox-detail h2{font-size:44px;margin:12px 0}.lightbox-detail p{margin-bottom:14px;font-size:12px}.lightbox-detail .lightbox-price{margin-bottom:20px}.lightbox-detail{padding:20px 0 15px}.lightbox-close{top:12px;right:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+
+/* Personal introduction and contact — light, quiet, consistent with the gallery. */
+.hero #intro{margin-bottom:15px}
+.hero .artist-story{max-width:545px;margin:0 auto 31px;font-size:13px;line-height:1.95;color:var(--ink);font-weight:400}
+.contact{padding:120px 0 133px;background:var(--bg);text-align:center}
+.contact-inner{max-width:700px;margin-inline:auto}
+.contact h2{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(52px,6.2vw,82px);font-weight:400;line-height:1;letter-spacing:-.035em;margin:20px auto 21px}
+.contact p{max-width:510px;font-size:13px;line-height:1.95;color:var(--sub);margin:0 auto 29px}
+.contact-link{font-size:13px;font-weight:600;letter-spacing:.02em;text-decoration:none;display:inline-block;border-bottom:1px solid var(--accent);padding-bottom:9px;overflow-wrap:anywhere}
+.contact-link:hover{color:var(--accent)}
+@media(max-width:640px){.hero .artist-story{font-size:12px;line-height:1.9;max-width:370px}.contact{padding:80px 0 91px}.contact h2{font-size:58px}.contact p{font-size:12px}}
+
+/* Show Rea's personal introduction as three distinct, easy-to-read paragraphs. */
+.hero #intro:empty{display:none}
+.hero .artist-story{max-width:580px;margin:0 auto 32px}
+.hero .artist-story p{font-size:13px;line-height:1.85;max-width:580px;margin:0 auto 16px;color:var(--ink);font-weight:400}
+.hero .artist-story p:last-child{margin-bottom:0}
+@media(max-width:640px){.hero .artist-story{max-width:390px}.hero .artist-story p{font-size:12px;line-height:1.85;margin-bottom:15px}}

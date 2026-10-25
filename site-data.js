@@ -1,11 +1,11 @@
-// Elysian Gallery — change this file using editor.html
+// Elysian Gallery — edit wording, artworks and details in editor.html
 window.ELYSIAN_SITE = {
   "settings": {
     "brand": "Art by Rea Wiebus",
     "eyebrow": "A collection inspired by Elysian Retreat",
     "heroLine1": "Little pieces of",
     "heroLine2": "paradise.",
-    "intro": "Painted memories of island days, familiar faces and the little moments that make Elysian Retreat so special.",
+    "intro": "",
     "collectionHeading": "The collection",
     "collectionSubheading": "From the sea to the stars, eight glimpses of life at Elysian Retreat.",
     "locationNote": "Prints are available exclusively at Elysian Retreat. Please make your purchase while on-site and collect your print from the team before departure.",
@@ -35,7 +35,11 @@ window.ELYSIAN_SITE = {
     "galleryWidth": 1110,
     "rowGap": 100,
     "columnGap": 52,
-    "desktopColumns": 3
+    "desktopColumns": 3,
+    "artistStory": "For a chapter of her life, Rea was lucky enough to live and work at Elysian Retreat, a place that became so much more than just a workplace.\n\nFrom the unique wildlife and boat trips to slow afternoons by the pool and evenings beneath the stars, she came to appreciate the little moments that make Elysian Retreat so special.\n\nInspired by a place so dear to her heart, Rea created this collection to capture the beauty, character and charm she came to love during her time on the island.",
+    "contactHeading": "Get in touch",
+    "contactText": "I always enjoy hearing what people think of my paintings. Whether you have an idea for a piece you'd like me to create, some feedback to share, or just want to say hello, my inbox is always open.",
+    "contactEmail": "reawiebus@gmail.com"
   },
   "artworks": [
     {

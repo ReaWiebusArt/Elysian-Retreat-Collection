@@ -7,8 +7,18 @@ const text=(id,value)=>{const el=document.getElementById(id); if(el)el.textConte
 const setTheme=(key,value)=>document.documentElement.style.setProperty(key,value);
 setTheme('--bg',s.background);setTheme('--ink',s.textColor);setTheme('--sub',s.mutedColor);setTheme('--accent',s.accentColor);
 setTheme('--gallery-width',(s.galleryWidth||1110)+'px');setTheme('--art-height',(s.imageHeight||315)+'px');setTheme('--row-gap',(s.rowGap||100)+'px');setTheme('--col-gap',(s.columnGap||52)+'px');setTheme('--cols',s.desktopColumns||3);
-text('brand',s.brand);text('eyebrow',s.eyebrow);text('hero-line-1',s.heroLine1);text('hero-line-2',s.heroLine2);text('intro',s.intro);
+text('brand',s.brand);
+const storyNode=document.getElementById('artist-story');
+if(storyNode){
+  storyNode.replaceChildren();
+  (s.artistStory||'').split(/\n\s*\n/).filter(Boolean).forEach(paragraph=>{
+    const p=document.createElement('p');p.textContent=paragraph.trim();storyNode.append(p);
+  });
+}
+text('eyebrow',s.eyebrow);text('hero-line-1',s.heroLine1);text('hero-line-2',s.heroLine2);text('intro',s.intro);
 text('collection-heading',s.collectionHeading);text('collection-subheading',s.collectionSubheading);
+text('contact-heading',s.contactHeading);text('contact-text',s.contactText);
+const email=document.getElementById('contact-email');if(email){email.textContent=s.contactEmail||'';email.href='mailto:'+(s.contactEmail||'reawiebus@gmail.com');}
 text('location-note',s.locationNote);text('how-heading',s.howHeading);text('footer-heading',s.footerHeading);text('footer-small',s.footerSmall);
 document.title=(s.brand||'Art by Rea')+' | The Elysian Collection';
 const safeStripe=url=>/^https:\/\/buy\.stripe\.com\/[A-Za-z0-9]+\/?$/.test(url||'');
