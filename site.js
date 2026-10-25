@@ -31,7 +31,7 @@ const img=el('img');img.src=item.image;img.alt=item.title+' — artwork by Rea';
 const meta=el('div','small-line');meta.append(el('span','art-index',String(index+1).padStart(2,'0')+' / '+String(data.artworks.length).padStart(2,'0')));meta.append(el('span','price',money(item.price)));card.append(meta);
 card.append(el('h3',null,item.title));card.append(el('p','art-desc',item.description));
 const link=el('a','buy');link.target='_blank';link.rel='noopener noreferrer';
-link.append(document.createTextNode('Purchase print '));link.append(el('span',null,'↗'));
+link.append(document.createTextNode('Purchase print'));
 if(safeStripe(item.checkout)){link.href=item.checkout;link.setAttribute('aria-label','Purchase '+item.title+' securely with Stripe');}else{link.removeAttribute('href');link.textContent='Checkout link needed';}
 card.append(link);gallery.append(card);
 }
